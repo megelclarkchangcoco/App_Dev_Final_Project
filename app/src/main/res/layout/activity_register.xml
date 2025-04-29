@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/signup_image"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginTop="100px"
+        android:src="@drawable/signup_learning"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <TextView
+        android:id="@+id/slogan_text"
+        android:layout_width="198dp"
+        android:layout_height="56dp"
+        android:layout_below="@+id/signup_image"
+        android:layout_marginLeft="400px"
+        android:layout_marginTop="-10dp"
+        android:text="Create an Account"
+        android:textColor="@color/black"
+        android:textSize="75.33px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/slogan_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slogan_text"
+        android:layout_marginTop="-23dp"
+        android:layout_marginLeft="230px"
+        android:text="Create an account by filling out the form below" />
+
+    <!---Name, Phonenumber, Username &  Password Inputs -->
+    <TextView
+        android:id="@+id/registerName_text"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slogan_text2"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="60px"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/registerName_input"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerName_text"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border_edit"
+        android:drawableStart="@drawable/loginuser_icon_resize"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        android:textColorHint="@color/gray"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/registerPhone_text"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerName_input"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="60px"
+        android:text="Phonenumber"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/registerPhonenumber_input"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerPhone_text"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border_edit"
+        android:drawableStart="@drawable/loginuser_icon_resize"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Phonenumber"
+        android:inputType="phone"
+        android:textColorHint="@color/gray"
+        android:textSize="15dp" />
+
+
+    <TextView
+        android:id="@+id/registerUsername_text"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerPhonenumber_input"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="60px"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/registerUsername_input"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerUsername_text"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border_edit"
+        android:drawableStart="@drawable/loginuser_icon_resize"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        android:textColorHint="@color/gray"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/registerPassword_text"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerUsername_input"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="60px"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/registerPassword_input"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerPassword_text"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/border_edit"
+        android:drawableStart="@drawable/passuser_icon_resize"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/gray"
+        android:textSize="15dp" />
+
+    <!---Button Sign up -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerSignup_button"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerPassword_input"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="23dp"
+        android:backgroundTint="@color/darkyellow"
+        android:text="Log In"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:cornerRadius="5dp" />
+
+    <TextView
+        android:id="@+id/slogan_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerSignup_button"
+        android:layout_marginLeft="340px"
+        android:layout_marginTop="11dp"
+        android:text="already have an account?" />
+
+    <TextView
+        android:id="@+id/toSignin_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerSignup_button"
+        android:layout_marginLeft="900px"
+        android:layout_marginTop="11dp"
+        android:text="Sign in"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true" />
+
+
+</RelativeLayout>

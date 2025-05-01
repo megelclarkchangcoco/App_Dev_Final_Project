@@ -13,11 +13,6 @@
         android:theme="@style/Theme.App_Dev_Final_Project"
         tools:targetApi="31">
 
-        <!-- HomeActivity is the entry point, no changes needed -->
-        <activity
-            android:name=".HomeActivity"
-            android:exported="true" />
-
         <!-- Registration and Login Activities -->
         <activity
             android:name=".RegisterActivity"
@@ -28,6 +23,9 @@
             android:label="Login" />
 
         <!-- Activities for Notifications, Tasks, Statistics, and Profile -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"/>
         <activity
             android:name=".NotificationActivity"
             android:exported="true" />

@@ -17,34 +17,51 @@ public class NotificationActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setSelectedItemId(R.id.nav_notifications); // Set default selected item
 
-        // Use the updated setOnItemSelectedListener
         bottomNavigation.setOnItemSelectedListener(this::onNavigationItemSelected);
     }
 
     private boolean onNavigationItemSelected(MenuItem item) {
         Intent intent;
+        String fullName = getIntent().getStringExtra("FULL_NAME");
+
         if (item.getItemId() == R.id.nav_home) {
-            intent = new Intent(this, HomeActivity.class); // Navigate to HomeActivity
+            intent = new Intent(this, HomeActivity.class);
+            if (fullName != null) {
+                intent.putExtra("FULL_NAME", fullName);
+            }
             startActivity(intent);
+            finish(); // Close NotificationActivity
             return true;
         }
-        else if (item.getItemId() == R.id.nav_notifications) {
+        if (item.getItemId() == R.id.nav_notifications) {
             // Stay in NotificationActivity
             return true;
         }
-        else if (item.getItemId() == R.id.nav_statistics) {
-            intent = new Intent(this, StatisticsActivity.class); // Navigate to StatisticsActivity
+        if (item.getItemId() == R.id.nav_statistics) {
+            intent = new Intent(this, StatisticsActivity.class);
+            if (fullName != null) {
+                intent.putExtra("FULL_NAME", fullName);
+            }
             startActivity(intent);
+            finish(); // Close NotificationActivity
             return true;
         }
-        else if (item.getItemId() == R.id.nav_tasks) {
-            intent = new Intent(this, TasksActivitys.class); // Navigate to TasksActivity
+        if (item.getItemId() == R.id.nav_tasks) {
+            intent = new Intent(this, TasksActivitys.class);
+            if (fullName != null) {
+                intent.putExtra("FULL_NAME", fullName);
+            }
             startActivity(intent);
+            finish(); // Close NotificationActivity
             return true;
         }
-        else if (item.getItemId() == R.id.nav_profile) {
-            intent = new Intent(this, ProfileActivity.class); // Navigate to ProfileActivity
+        if (item.getItemId() == R.id.nav_profile) {
+            intent = new Intent(this, ProfileActivity.class);
+            if (fullName != null) {
+                intent.putExtra("FULL_NAME", fullName);
+            }
             startActivity(intent);
+            finish(); // Close NotificationActivity
             return true;
         }
         return false;

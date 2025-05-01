@@ -17,33 +17,47 @@ public class TasksActivitys extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.nav_tasks);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(this::onNavigateItemSelected);
+        bottomNavigationView.setOnItemSelectedListener(this::onNavigateItemSelected);
     }
 
     private boolean onNavigateItemSelected(MenuItem item) {
         Intent intent;
+        // Get FULL_NAME to pass to other activities
+        String fullName = getIntent().getStringExtra("FULL_NAME");
 
-        if(item.getItemId() == R.id.nav_home){ // navigate to HomeActivity
+        if (item.getItemId() == R.id.nav_home) { // Navigate to HomeActivity
             intent = new Intent(this, HomeActivity.class);
+            if (fullName != null) {
+                intent.putExtra("FULL_NAME", fullName);
+            }
             startActivity(intent);
             return true;
         }
-        else if(item.getItemId() == R.id.nav_notifications){ // navigate to NotificationActivity
+        if (item.getItemId() == R.id.nav_notifications) { // Navigate to NotificationActivity
             intent = new Intent(this, NotificationActivity.class);
+            if (fullName != null) {
+                intent.putExtra("FULL_NAME", fullName);
+            }
             startActivity(intent);
             return true;
         }
-        else if(item.getItemId() == R.id.nav_statistics){ // navigate to StatisticsActivity
+        if (item.getItemId() == R.id.nav_statistics) { // Navigate to StatisticsActivity
             intent = new Intent(this, StatisticsActivity.class);
+            if (fullName != null) {
+                intent.putExtra("FULL_NAME", fullName);
+            }
             startActivity(intent);
             return true;
         }
-        else if(item.getItemId() == R.id.nav_tasks){
-            // stay on TaskActivity
+        if (item.getItemId() == R.id.nav_tasks) {
+            // Stay on TasksActivity, no need to finish
             return true;
         }
-        else if(item.getItemId() == R.id.nav_profile){ // navigate to ProfileActivity
+        if (item.getItemId() == R.id.nav_profile) { // Navigate to ProfileActivity
             intent = new Intent(this, ProfileActivity.class);
+            if (fullName != null) {
+                intent.putExtra("FULL_NAME", fullName);
+            }
             startActivity(intent);
             return true;
         }

@@ -26,6 +26,7 @@ public class NotificationActivity extends AppCompatActivity {
 
         if (item.getItemId() == R.id.nav_home) {
             intent = new Intent(this, HomeActivity.class);
+            // Check if the FULL_NAME extra exists in the current activity's intent
             if (fullName != null) {
                 intent.putExtra("FULL_NAME", fullName);
             }
@@ -39,6 +40,7 @@ public class NotificationActivity extends AppCompatActivity {
         }
         if (item.getItemId() == R.id.nav_statistics) {
             intent = new Intent(this, StatisticsActivity.class);
+            // Check if the FULL_NAME extra exists in the current activity's intent
             if (fullName != null) {
                 intent.putExtra("FULL_NAME", fullName);
             }
@@ -48,6 +50,7 @@ public class NotificationActivity extends AppCompatActivity {
         }
         if (item.getItemId() == R.id.nav_tasks) {
             intent = new Intent(this, TasksActivitys.class);
+            // Check if the FULL_NAME extra exists in the current activity's intent
             if (fullName != null) {
                 intent.putExtra("FULL_NAME", fullName);
             }
@@ -57,6 +60,7 @@ public class NotificationActivity extends AppCompatActivity {
         }
         if (item.getItemId() == R.id.nav_profile) {
             intent = new Intent(this, ProfileActivity.class);
+            // Check if the FULL_NAME extra exists in the current activity's intent
             if (fullName != null) {
                 intent.putExtra("FULL_NAME", fullName);
             }

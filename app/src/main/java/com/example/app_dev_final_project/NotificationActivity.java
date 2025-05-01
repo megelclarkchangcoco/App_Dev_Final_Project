@@ -18,7 +18,7 @@ public class NotificationActivity extends AppCompatActivity {
         bottomNavigation.setSelectedItemId(R.id.nav_notifications); // Set default selected item
 
         // Use the updated setOnItemSelectedListener
-        bottomNavigation.setOnItemSelectedListener(item -> onNavigationItemSelected(item));
+        bottomNavigation.setOnItemSelectedListener(this::onNavigationItemSelected);
     }
 
     private boolean onNavigationItemSelected(MenuItem item) {

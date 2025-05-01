@@ -17,8 +17,8 @@ public class HomeActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setSelectedItemId(R.id.nav_home); // Set default selected item
 
-        // Use the updated setOnItemSelectedListener
-        bottomNavigation.setOnItemSelectedListener(item -> onNavigationItemSelected(item));
+        // Use method reference instead of lambda
+        bottomNavigation.setOnItemSelectedListener(this::onNavigationItemSelected);
     }
 
     private boolean onNavigationItemSelected(MenuItem item) {

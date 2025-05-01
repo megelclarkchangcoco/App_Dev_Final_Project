@@ -24,6 +24,7 @@ public class databaseConnection extends SQLiteOpenHelper {
         super(context, databaseName, null, dbVersion);
     }
 
+    // method for creating table
     @Override
     public void onCreate(SQLiteDatabase db) {
         String query = "CREATE TABLE " + databaseTable + "("
@@ -36,6 +37,7 @@ public class databaseConnection extends SQLiteOpenHelper {
         db.execSQL(query);
     }
 
+    // method if table will drop if already exist
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + databaseTable);

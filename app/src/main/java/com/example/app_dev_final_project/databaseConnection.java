@@ -13,7 +13,7 @@ public class databaseConnection extends SQLiteOpenHelper {
 
     private static final String databaseName = "KeepItUp_db";
     private static final String databaseTable = "Users";
-    private static final  int dbVersion = 1;
+    private static  int dbVersion = 1;
     private static final String ID = "id";
     private static final String Fullname = "fullname";
     private static final String Phonenumber = "phonenumbers";

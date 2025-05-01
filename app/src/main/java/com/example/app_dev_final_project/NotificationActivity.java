@@ -27,18 +27,22 @@ public class NotificationActivity extends AppCompatActivity {
             intent = new Intent(this, HomeActivity.class); // Navigate to HomeActivity
             startActivity(intent);
             return true;
-        } else if (item.getItemId() == R.id.nav_notifications) {
+        }
+        else if (item.getItemId() == R.id.nav_notifications) {
             // Stay in NotificationActivity
             return true;
-        } else if (item.getItemId() == R.id.nav_statistics) {
+        }
+        else if (item.getItemId() == R.id.nav_statistics) {
             intent = new Intent(this, StatisticsActivity.class); // Navigate to StatisticsActivity
             startActivity(intent);
             return true;
-        } else if (item.getItemId() == R.id.nav_tasks) {
+        }
+        else if (item.getItemId() == R.id.nav_tasks) {
             intent = new Intent(this, TasksActivitys.class); // Navigate to TasksActivity
             startActivity(intent);
             return true;
-        } else if (item.getItemId() == R.id.nav_profile) {
+        }
+        else if (item.getItemId() == R.id.nav_profile) {
             intent = new Intent(this, ProfileActivity.class); // Navigate to ProfileActivity
             startActivity(intent);
             return true;

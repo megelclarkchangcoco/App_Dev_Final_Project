@@ -16,7 +16,9 @@ public class NotificationActivity extends AppCompatActivity {
         // Set up Bottom Navigation
         BottomNavigationView bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.setSelectedItemId(R.id.nav_notifications); // Set default selected item
-        bottomNavigation.setOnNavigationItemSelectedListener(this::onNavigationItemSelected);
+
+        // Use the updated setOnItemSelectedListener
+        bottomNavigation.setOnItemSelectedListener(item -> onNavigationItemSelected(item));
     }
 
     private boolean onNavigationItemSelected(MenuItem item) {

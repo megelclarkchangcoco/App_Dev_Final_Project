@@ -11,14 +11,14 @@ import androidx.annotation.Nullable;
 
 public class databaseConnection extends SQLiteOpenHelper {
 
-    private static String databaseName = "KeepItUp_db";
-    private static String databaseTable = "Users";
+    private static final String databaseName = "KeepItUp_db";
+    private static final String databaseTable = "Users";
     private static int dbVersion = 1;
-    private static String ID = "id";
-    private static String Fullname = "fullname";
-    private static String Phonenumber = "phonenumbers";
-    private static String Username = "username";
-    private static String Password = "password";
+    private static final String ID = "id";
+    private static final String Fullname = "fullname";
+    private static final String Phonenumber = "phonenumbers";
+    private static final String Username = "username";
+    private static final String Password = "password";
 
     public databaseConnection(@Nullable Context context) {
         super(context, databaseName, null, dbVersion);
